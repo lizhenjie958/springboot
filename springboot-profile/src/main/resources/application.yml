@@ -1,0 +1,7 @@
+person:
+  name: 2222
+  age: 2222
+
+spring:
+  profiles:
+    active: prod

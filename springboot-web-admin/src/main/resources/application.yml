@@ -1,0 +1,49 @@
+spring:
+  boot:
+    admin:
+      client:
+        url: http://localhost:8888
+        instance:
+          prefer-ip: true  #使用ip注册进来
+  application:
+    name: boot-05-web-admin
+
+management:
+  endpoints:
+    enabled-by-default: true
+    web:
+      exposure:
+        include: '*' # 以web方式暴露所有端点
+
+
+  endpoint:
+    health:
+      show-details: always
+      enabled: true
+
+    info:
+      enabled: true
+
+    beans:
+      enabled: true
+
+    metrics:
+      enabled: true
+
+    shutdown:
+      enabled: true
+
+
+info:
+  appName: boot-admin
+  version: 2.0.1
+  mavenProjectName: @project.artifactId@  #使用@@可以获取maven的pom文件值
+  mavenProjectVersion: @project.version@
+
+
+
+com:
+  jie:
+    hello:
+      prefix: 你好！
+      suffix: 我好！
